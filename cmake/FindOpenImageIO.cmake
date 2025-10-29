@@ -24,9 +24,10 @@ This will define the following variables:
   OpenImageIO library path.
 
 #]=======================================================================]
-if (TARGET OpenImageIO::OpenImageIO)
+if (TARGET OpenImageIO::OpenImageIO AND TARGET OpenImageIO::OpenImageIO_Util)
     return()
 endif()
+
 
 # Determine search paths
 if(OpenImageIO_ROOT)
