@@ -27,7 +27,7 @@ governing permissions and limitations under the License.
 #include <pxr/usd/ar/packageUtils.h>
 #include <pxr/usd/ar/resolver.h>
 #include <pxr/usd/pcp/dynamicFileFormatContext.h>
-#include <pxr/usd/usd/usdaFileFormat.h>
+#include <pxr/usd/sdf/usdaFileFormat.h>
 #include <pxr/usd/usdGeom/tokens.h>
 #include <pxr/usd/usdMedia/tokens.h>
 
@@ -309,14 +309,14 @@ SBSARFileFormat::WriteToString(const SdfLayer& layer,
                                const std::string& comment) const
 {
     // Fall back to USDA
-    return SdfFileFormat::FindById(UsdUsdaFileFormatTokens->Id)->WriteToString(layer, str, comment);
+    return SdfFileFormat::FindById(SdfUsdaFileFormatTokens->Id)->WriteToString(layer, str, comment);
 }
 
 bool
 SBSARFileFormat::WriteToStream(const SdfSpecHandle& spec, std::ostream& out, size_t indent) const
 {
     // Fall back to USDA
-    return SdfFileFormat::FindById(UsdUsdaFileFormatTokens->Id)->WriteToStream(spec, out, indent);
+    return SdfFileFormat::FindById(SdfUsdaFileFormatTokens->Id)->WriteToStream(spec, out, indent);
 }
 
 bool

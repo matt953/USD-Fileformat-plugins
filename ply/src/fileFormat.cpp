@@ -24,7 +24,7 @@ governing permissions and limitations under the License.
 #include <happly.h>
 
 #include <pxr/base/tf/fileUtils.h>
-#include <pxr/usd/usd/usdaFileFormat.h>
+#include <pxr/usd/sdf/usdaFileFormat.h>
 
 #include <filesystem>
 #include <fstream>
@@ -197,14 +197,14 @@ UsdPlyFileFormat::WriteToString(const SdfLayer& layer,
                                 const std::string& comment) const
 {
     // Write USD as PLY: Defer to the usda file format for now.
-    return SdfFileFormat::FindById(UsdUsdaFileFormatTokens->Id)->WriteToString(layer, str, comment);
+    return SdfFileFormat::FindById(SdfUsdaFileFormatTokens->Id)->WriteToString(layer, str, comment);
 }
 
 bool
 UsdPlyFileFormat::WriteToStream(const SdfSpecHandle& spec, std::ostream& out, size_t indent) const
 {
     // Write USD as PLY: Defer to the usda file format for now.
-    return SdfFileFormat::FindById(UsdUsdaFileFormatTokens->Id)->WriteToStream(spec, out, indent);
+    return SdfFileFormat::FindById(SdfUsdaFileFormatTokens->Id)->WriteToStream(spec, out, indent);
 }
 
 PXR_NAMESPACE_CLOSE_SCOPE

@@ -39,7 +39,7 @@ governing permissions and limitations under the License.
 #include <pxr/usd/usd/schemaRegistry.h>
 #include <pxr/usd/usd/stage.h>
 #include <pxr/usd/usd/typed.h>
-#include <pxr/usd/usd/zipFile.h>
+#include <pxr/usd/sdf/zipFile.h>
 #include <pxr/usd/usdGeom/basisCurves.h>
 #include <pxr/usd/usdGeom/camera.h>
 #include <pxr/usd/usdGeom/hermiteCurves.h>

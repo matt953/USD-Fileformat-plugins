@@ -11,7 +11,7 @@ if (USD_FILEFORMATS_ENABLE_PLY OR USD_FILEFORMATS_ENABLE_SPZ)
     find_package(SphericalHarmonics REQUIRED)
 endif()
 
-add_library(fileformatUtils SHARED)
+add_library(fileformatUtils STATIC)
 target_compile_definitions(fileformatUtils PRIVATE USDFFUTILS_EXPORTS)
 usd_plugin_compile_config(fileformatUtils)
 

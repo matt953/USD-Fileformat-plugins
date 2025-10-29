@@ -49,7 +49,7 @@ PRIVATE
     "<pxr/usd/ar/asset.h>"
     "<pxr/usd/ar/defaultResolver.h>"
     "<pxr/usd/ar/resolverContextBinder.h>"
-    "<pxr/usd/usd/zipFile.h>"
+    "<pxr/usd/sdf/zipFile.h>"
     "<pxr/usd/usd/typed.h>"
     "<pxr/usd/usd/primRange.h>"
     "<pxr/usd/usd/payloads.h>"

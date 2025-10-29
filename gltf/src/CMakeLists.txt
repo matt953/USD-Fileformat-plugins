@@ -1,4 +1,4 @@
-add_library(usdGltf SHARED)
+add_library(usdGltf STATIC)
 
 usd_plugin_compile_config(usdGltf)
 target_compile_definitions(usdGltf PRIVATE USDGLTF_EXPORTS)
@@ -69,7 +69,7 @@ target_precompile_headers(usdGltf
     "<pxr/usd/ar/asset.h>"
     "<pxr/usd/ar/defaultResolver.h>"
     "<pxr/usd/ar/resolverContextBinder.h>"
-    "<pxr/usd/usd/zipFile.h>"
+    "<pxr/usd/sdf/zipFile.h>"
     "<pxr/usd/usd/typed.h>"
     "<pxr/usd/usd/primRange.h>"
     "<pxr/usd/usd/payloads.h>"
