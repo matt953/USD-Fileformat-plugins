@@ -238,5 +238,14 @@ if(OpenImageIO_FOUND)
         endif()
     endif()
 
+    # Create separate imported target for OpenImageIO_Util
+    if(NOT TARGET OpenImageIO::OpenImageIO_Util AND OpenImageIO_Util_LIBRARY)
+        add_library(OpenImageIO::OpenImageIO_Util STATIC IMPORTED)
+        set_target_properties(OpenImageIO::OpenImageIO_Util PROPERTIES
+            IMPORTED_LOCATION "${OpenImageIO_Util_LIBRARY}"
+            INTERFACE_INCLUDE_DIRECTORIES "${OpenImageIO_INCLUDE_DIR}"
+        )
+    endif()
+
     mark_as_advanced(OpenImageIO_INCLUDE_DIR OpenImageIO_LIBRARY OpenImageIO_Util_LIBRARY)
 endif()
